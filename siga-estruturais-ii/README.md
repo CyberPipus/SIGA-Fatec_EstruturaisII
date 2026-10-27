@@ -47,11 +47,15 @@ Execute antes de ler o restante deste arquivo: a saída **mostra os três desliz
 ## Sua tarefa
 
 Siga as etapas da ficha de atividade prática:
-
 1. **Fazer a conta.** Registre neste README quantas subclasses de relatório existem hoje e quantas seriam necessárias se a secretaria pedisse uma quarta característica (um rodapé com a data de emissão). Mostre o raciocínio de 2ⁿ.
+R: Há 4 subclasses de relatórios com 2 características opcionais. Caso fossem 3 opcionais independentes, teríamos 8 classes e, se a secreataria requisitar uma 4ª característica, terminaríamos com 16 classes.
+
 2. **Criar os decoradores.** Escreva a classe abstrata `DecoradorRelatorio`, que implementa `Relatorio` e contém um `Relatorio`, e as três subclasses `ComCabecalho`, `ComNumeracao` e `ComMarcaDagua`. Cada uma deve conter o seu comportamento **uma vez só**. Ao terminar, as quatro classes `RelatorioCom...` originais podem ser apagadas.
+
 3. **Empilhar.** No `Main`, monte pelo menos **duas pilhas diferentes** de decoradores sobre o mesmo `RelatorioDeAlunos` e imprima as duas saídas. Experimente inverter a ordem de `ComCabecalho` e `ComNumeracao` e observe o que muda.
+
 4. **Criar o Composite.** Escreva a interface `ItemCurricular` com `getNome()`, `getCargaHoraria()` e `imprimir(int nivel)`. Faça `Disciplina` e `Modulo` a implementarem, com a coleção de `Modulo` passando a ser de `ItemCurricular`. A classe `GradeCurricular` deixa de existir: as operações passam a ser dos próprios itens.
+
 5. **Provar que funciona.** Acrescente um submódulo de **terceiro nível** (uma trilha de especialização dentro de um semestre) e verifique que nada no cliente precisou mudar.
 
 ## Critério de sucesso
