@@ -70,6 +70,8 @@ Os métodos `adicionar` e `remover` fazem sentido no composto, mas não na folha
 
 A apostila adota a primeira. Você pode adotar a outra — mas **justifique a escolha no README**. O que não vale é copiar uma das duas formas sem perceber que havia uma decisão a tomar.
 
+R: Deixar "adicionar()" e "remover()" contidos em "Modulo.java" é justifacado pelas disciplinas não possuírem outros elementos. Deste modo evitam-se métodos desnecessários e o código mantém-se simples, eficiente e coeso.
+
 ## Padrão de entrega
 
 Conforme a ficha de atividade prática: identificadores em português, um arquivo `.java` por classe pública, código formatado, entrega no repositório Git com README e commits descritivos. O uso de IA para gerar o código é proibido nesta atividade (ver seção 5.3 da ficha).

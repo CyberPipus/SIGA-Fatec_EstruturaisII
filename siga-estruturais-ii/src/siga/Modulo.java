@@ -16,6 +16,10 @@ public class Modulo implements ItemCurricular {
         itens.add(item);
     }
 
+    public void remover(ItemCurricular item){
+        itens.remove(item);
+    }
+
     @Override
     public String getNome(){
         return nome;
