@@ -48,7 +48,7 @@ Execute antes de ler o restante deste arquivo: a saída **mostra os três desliz
 
 Siga as etapas da ficha de atividade prática:
 1. **Fazer a conta.** Registre neste README quantas subclasses de relatório existem hoje e quantas seriam necessárias se a secretaria pedisse uma quarta característica (um rodapé com a data de emissão). Mostre o raciocínio de 2ⁿ.
-R: Há 4 subclasses de relatórios com 2 características opcionais. Caso fossem 3 opcionais independentes, teríamos 8 classes e, se a secreataria requisitar uma 4ª característica, terminaríamos com 16 classes.
+R: Há 4 subclasses de relatórios com 3 características opcionais. Caso fossem 3 opcionais independentes, teríamos 8 classes e, se a secreataria requisitar uma 4ª característica, terminaríamos com 16 classes.
 
 2. **Criar os decoradores.** Escreva a classe abstrata `DecoradorRelatorio`, que implementa `Relatorio` e contém um `Relatorio`, e as três subclasses `ComCabecalho`, `ComNumeracao` e `ComMarcaDagua`. Cada uma deve conter o seu comportamento **uma vez só**. Ao terminar, as quatro classes `RelatorioCom...` originais podem ser apagadas.
 
