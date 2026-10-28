@@ -1,9 +1,5 @@
 package siga;
 
-/**
- * Demonstra os três deslizes acontecendo. Execute e observe a saída:
- * é dela que partem as etapas da ficha de atividade prática.
- */
 public class Main {
 
     public static void main(String[] args) {
@@ -13,10 +9,13 @@ public class Main {
         System.out.println("1) Relatorios: uma subclasse por combinacao");
         Relatorio[] variantes = {
             new RelatorioDeAlunos(),
-            new RelatorioComCabecalho(),
-            new RelatorioComNumeracao(),
-            new RelatorioComCabecalhoENumeracao(),
-            new RelatorioComCabecalhoENumeracaoEMarcaDagua()
+            new ComCabecalho(new RelatorioDeAlunos()),
+            new ComMarcaDAgua(new RelatorioDeAlunos()),
+            new ComNumeracao(new RelatorioDeAlunos()),
+            new ComCabecalho(new ComMarcaDAgua(new RelatorioDeAlunos())),
+            new ComCabecalho(new ComNumeracao(new RelatorioDeAlunos())),
+            new ComMarcaDAgua(new ComNumeracao(new RelatorioDeAlunos())),
+            new ComCabecalho(new ComMarcaDAgua(new ComNumeracao(new RelatorioDeAlunos())))
         };
         for (Relatorio r : variantes) {
             System.out.println("   --- " + r.getClass().getSimpleName() + " ---");
@@ -24,10 +23,6 @@ public class Main {
                 System.out.println("   " + linha);
             }
         }
-        System.out.println("   >> DESLIZE 1: sao 4 subclasses para 3 caracteristicas opcionais,");
-        System.out.println("      e faltam as combinacoes que ninguem pediu ainda. Com 3 opcionais");
-        System.out.println("      independentes seriam 8 classes; com 4, seriam 16.");
-        System.out.println("   >> DESLIZE 2: o texto do cabecalho esta escrito em TRES classes.");
 
         System.out.println();
         System.out.println("2) Estrutura curricular percorrida com instanceof");
@@ -51,8 +46,5 @@ public class Main {
         System.out.println("   >> DESLIZE 3: a travessia com instanceof aparece DUAS vezes,");
         System.out.println("      uma em calcularCarga e outra em imprimir. Uma terceira");
         System.out.println("      operacao exigiria uma terceira copia.");
-
-        System.out.println();
-        System.out.println("Sua tarefa: ver o README.md e a ficha de atividade pratica.");
     }
 }
