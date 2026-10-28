@@ -1,7 +1,7 @@
 package siga;
 
 public class ComNumeracao extends DecoradorRelatorio {
-    public ComNumeracao(Relatorio interno) {
+    public ComNumeracao(Relatorio interno){
         super(interno);
     }
 

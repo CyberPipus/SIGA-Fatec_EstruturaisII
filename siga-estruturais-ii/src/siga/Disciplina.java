@@ -1,24 +1,27 @@
 package siga;
 
-/**
- * Folha da estrutura curricular — hoje sem nenhuma interface em comum
- * com Modulo. É essa ausência que obriga o cliente a usar instanceof.
- */
-public class Disciplina {
+public class Disciplina implements ItemCurricular{
 
     private final String nome;
     private final int cargaHoraria;
 
-    public Disciplina(String nome, int cargaHoraria) {
-        this.nome = nome;
-        this.cargaHoraria = cargaHoraria;
+    public Disciplina(String nome, int cargaHoraria){
+        this.nome=nome;
+        this.cargaHoraria=cargaHoraria;
     }
 
-    public String getNome() {
+    @Override
+    public String getNome(){
         return nome;
     }
 
-    public int getCargaHoraria() {
+    @Override
+    public int getCargaHoraria(){
         return cargaHoraria;
+    }
+
+    @Override
+    public void imprimir(int nivel){
+        System.out.println("  ".repeat(nivel)+nome+" ("+cargaHoraria+"h)");
     }
 }

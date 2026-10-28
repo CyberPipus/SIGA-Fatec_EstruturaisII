@@ -1,7 +1,7 @@
 package siga;
 
 public class ComMarcaDAgua extends DecoradorRelatorio {
-    public ComMarcaDAgua(Relatorio interno) {
+    public ComMarcaDAgua(Relatorio interno){
         super(interno);
     }
 

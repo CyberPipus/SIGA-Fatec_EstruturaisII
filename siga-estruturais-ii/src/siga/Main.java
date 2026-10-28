@@ -1,13 +1,13 @@
 package siga;
 
-public class Main {
+public class Main{
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         System.out.println("=== SIGA - Aula 11: Decorator e Composite (codigo inicial) ===");
 
         System.out.println();
         System.out.println("1) Relatorios: uma subclasse por combinacao");
-        Relatorio[] variantes = {
+        Relatorio[] variantes={
             new RelatorioDeAlunos(),
             new ComCabecalho(new RelatorioDeAlunos()),
             new ComMarcaDAgua(new RelatorioDeAlunos()),
@@ -17,7 +17,7 @@ public class Main {
             new ComMarcaDAgua(new ComNumeracao(new RelatorioDeAlunos())),
             new ComCabecalho(new ComMarcaDAgua(new ComNumeracao(new RelatorioDeAlunos())))
         };
-        for (Relatorio r : variantes) {
+        for (Relatorio r : variantes){
             System.out.println("   --- " + r.getClass().getSimpleName() + " ---");
             for (String linha : r.gerar().split("\n")) {
                 System.out.println("   " + linha);
@@ -25,7 +25,7 @@ public class Main {
         }
 
         System.out.println();
-        System.out.println("2) Estrutura curricular percorrida com instanceof");
+        System.out.println("2) Composite: Modulo e Disciplina");
         Modulo curso = new Modulo("DSM - Desenvolvimento de Software Multiplataforma");
 
         Modulo primeiro = new Modulo("1o semestre");
@@ -40,8 +40,7 @@ public class Main {
         curso.adicionar(segundo);
         curso.adicionar(new Disciplina("Projeto Integrador", 40));
 
-        GradeCurricular grade = new GradeCurricular();
-        grade.imprimir(curso, 1);
-        System.out.println("   Carga total: " + grade.calcularCarga(curso) + "h");
+        System.out.println("   Carga total: " + curso.getCargaHoraria() + "h");
+        curso.imprimir(0);
     }
 }
