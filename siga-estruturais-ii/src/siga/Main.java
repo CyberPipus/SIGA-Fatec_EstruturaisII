@@ -43,8 +43,5 @@ public class Main {
         GradeCurricular grade = new GradeCurricular();
         grade.imprimir(curso, 1);
         System.out.println("   Carga total: " + grade.calcularCarga(curso) + "h");
-        System.out.println("   >> DESLIZE 3: a travessia com instanceof aparece DUAS vezes,");
-        System.out.println("      uma em calcularCarga e outra em imprimir. Uma terceira");
-        System.out.println("      operacao exigiria uma terceira copia.");
     }
 }
