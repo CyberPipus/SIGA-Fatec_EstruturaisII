@@ -6,7 +6,7 @@ public class Main{
         System.out.println("=== SIGA - Aula 11: Decorator e Composite (codigo inicial) ===");
 
         System.out.println();
-        System.out.println("1) Relatorios: uma subclasse por combinacao");
+        System.out.println("1) Decorator: Relatorio de Alunos");
         Relatorio[] variantes={
             new RelatorioDeAlunos(),
             new ComCabecalho(new RelatorioDeAlunos()),
@@ -35,6 +35,11 @@ public class Main{
         Modulo segundo = new Modulo("2o semestre");
         segundo.adicionar(new Disciplina("Tecnicas de Programacao II", 80));
         segundo.adicionar(new Disciplina("Desenvolvimento Web II", 80));
+
+        Modulo trilha = new Modulo("Trilha de Especializacao em Bancos de Dados Relacionais");
+        trilha.adicionar(new Disciplina("MariaDB", 40));
+        trilha.adicionar(new Disciplina("PostgreSQL", 60));
+        segundo.adicionar(trilha);
 
         curso.adicionar(primeiro);
         curso.adicionar(segundo);
